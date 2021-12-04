@@ -131,7 +131,7 @@ const html = (obj) => {
       <div class="grid-item center">
       ${obj.center.map((items) => {
         console.log(items);
-        return `<span class="${obj.img}"></span>
+        return `<img src="./img/twotone_question_answer_black_24dp.png"  />
           <h2>${items.title}</h2>
           <p>${items.text}</p>
           `;
