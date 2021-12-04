@@ -131,7 +131,7 @@ const html = (obj) => {
       <div class="grid-item center">
       ${obj.center.map((items) => {
         console.log(items);
-        return `<img src="./img/twotone_question_answer_black_24dp.png"  />
+        return `<img src="https://res.cloudinary.com/rjsmedia/image/upload/v1638649439/twotone_question_answer_black_24dp_iaflb4.png"  />
           <h2>${items.title}</h2>
           <p>${items.text}</p>
           `;
@@ -141,7 +141,6 @@ const html = (obj) => {
       <ul class="dropdown-list">
         ${obj.right
           .map((item) => {
-            console.log(item);
             return `
           <li class="dropdown-list-item"><a class="dropdown-list-link" href="${item.link}">${item.text}</a></li> `;
           })
