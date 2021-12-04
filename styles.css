@@ -148,7 +148,6 @@ li {
   text-align: center;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-  /* color: #eba900; */
 }
 
 .content-container {
@@ -363,7 +362,6 @@ li {
     align-items: center;
     justify-content: stretch;
     padding: 0 0;
-    margin: 0;
   }
 
   .nav-logo-combo-wrapper {
