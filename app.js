@@ -118,6 +118,7 @@ const data = [
 const contentContainer = document.querySelector('.content-container');
 const navLink = document.querySelectorAll('.nav-link');
 const searchBarWrapper = document.querySelector('.search-bar-wrapper');
+const logoContainer = document.querySelector('.logo-container');
 
 const appState = {};
 
@@ -155,6 +156,10 @@ const renderDropDown = (id) => {
 
   contentContainer.innerHTML = html(menuDropDown[0]);
 };
+
+logoContainer.addEventListener('mouseenter', () => {
+  contentContainer.classList.remove('show');
+});
 
 navLink.forEach((item, i) => {
   contentContainer.addEventListener('mouseleave', (e) => {

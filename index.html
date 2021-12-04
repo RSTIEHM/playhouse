@@ -44,10 +44,23 @@
         border: none;
         color: #fff;
         cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
       }
 
-      .btn-search {
+      .btn:hover {
+        opacity: 0.9;
+      }
+
+      .btn-search,
+      .btn-all-events {
         background: #eba900;
+      }
+
+      .btn-all-events {
+        display: block;
+        text-align: center;
+        margin: 30px auto 30px auto;
       }
 
       .fa-envelope-o {
@@ -62,7 +75,7 @@
       }
 
       .search-bar-wrapper {
-        background: #000;
+        background: #222;
       }
 
       .search-bar-container {
@@ -93,6 +106,11 @@
         font-weight: 300;
         font-style: inherit;
         font-size: 15px;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .search-bar-link:hover {
+        color: orange;
       }
 
       .input {
@@ -166,32 +184,38 @@
 
       .content-container {
         opacity: 0;
-        transform: translateY(-200px);
-        transition: all 0.7 ease-in-out;
+        transform: translateX(-200px);
+
+        transition: all 0.2s ease-in-out;
         visibility: hidden;
         display: grid;
         grid-template-columns: 25% 15% 55%;
-        z-index: 2;
         position: absolute;
         background-color: #fff;
         width: 100%;
       }
 
       .content-container.show {
-        transform: translateY(0px);
+        transform: translateX(0px);
         opacity: 1;
         visibility: visible;
       }
 
       .left,
       .center {
-        border-right: 1px solid black;
+        border-right: 2px solid rgba(170, 170, 170, 0.726);
         text-align: center;
         display: block;
       }
 
       .center {
         padding: 2rem 1rem;
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
       }
 
       .right {
@@ -209,6 +233,14 @@
       .dropdown-list-item {
         margin-bottom: 25px;
         font-size: 20px;
+      }
+
+      .dropdown-list-link {
+        transition: all 0.2s ease-in-out;
+      }
+
+      .dropdown-list-link:hover {
+        color: #eba900;
       }
 
       .image-gallery-image-conatiner {
@@ -345,7 +377,7 @@
         position: absolute;
       }
 
-      .event-buy-link @media (max-width: 1350px) {
+      @media (max-width: 1350px) {
         .search-bar-container {
           padding: 0 2rem;
         }
@@ -399,9 +431,24 @@
         }
       }
 
+      @media (max-width: 950px) {
+        .search-right {
+          display: none;
+        }
+      }
+
+      @media (max-width: 830px) {
+      }
+
       @media (max-width: 785px) {
         .nav-link a {
           font-size: 13px;
+        }
+        .input-search {
+          width: 320px;
+        }
+        .email-link {
+          display: block;
         }
       }
       @media (max-width: 700px) {
@@ -589,6 +636,7 @@
               <!-- EVENT -->
             </div>
           </div>
+          <button class="btn btn-all-events">ALL EVENTS</button>
         </div>
 
         <!-- UPCOMING EVENTS END -->
