@@ -4,9 +4,9 @@ const data = [
     left: '',
     center: [
       {
-        img: 'fa-envelope-o',
+        img: 'fa fa-envelope-o',
         title: 'Join Us For Email Updates',
-        text: 'This is center text 1',
+        text: 'Advanced Ticket Sales And Group Discounts',
       },
     ],
     right: [
@@ -25,16 +25,17 @@ const data = [
       {
         img: 'https://res.cloudinary.com/rjsmedia/image/upload/v1638570348/navigation-promo-example_c0vgqu.png',
         title: 'Visit Us In Person',
-        text: 'This is center text 2',
+        text: 'Add To Your Experience',
       },
     ],
     right: [
-      { link: '/', text: 'OUR PROMISE' },
-      { link: '/', text: 'CALENDAR OF EVENTS' },
-      { link: '/', text: 'SUBSCRIPTIONS & SERIES' },
-      { link: '/', text: 'GROUP SALES' },
-      { link: '/', text: 'BOX OFFICE INFO' },
-      { link: '/', text: 'SEATING CHARTS' },
+      { link: '/', text: 'HEALTH & SAFETY GUIDELINES' },
+      { link: '/', text: 'GUEST ENTRY POLICY' },
+      { link: '/', text: 'GETTING HERE' },
+      { link: '/', text: 'PARKING' },
+      { link: '/', text: 'DINING' },
+      { link: '/', text: 'WHERE TO STAY' },
+      { link: '/', text: 'FAQ' },
     ],
   },
   {
@@ -44,16 +45,15 @@ const data = [
       {
         img: 'https://res.cloudinary.com/rjsmedia/image/upload/v1638570348/navigation-promo-example_c0vgqu.png',
         title: 'Support Local Performances',
-        text: 'This is center text 3',
+        text: 'Enjoy all local productions in the area',
       },
     ],
     right: [
-      { link: '/', text: 'OUR PROMISE' },
-      { link: '/', text: 'CALENDAR OF EVENTS' },
-      { link: '/', text: 'SUBSCRIPTIONS & SERIES' },
+      { link: '/', text: 'SUPPORT' },
+      { link: '/', text: 'MEMBERSHIPS' },
+      { link: '/', text: 'SUBSCRIPTIONS' },
       { link: '/', text: 'GROUP SALES' },
-      { link: '/', text: 'BOX OFFICE INFO' },
-      { link: '/', text: 'SEATING CHARTS' },
+      { link: '/', text: 'VOLUNTEER' },
     ],
   },
   {
@@ -127,10 +127,11 @@ const removeClass = (elem, cl) => {
 };
 
 const html = (obj) => {
-  return `<div class="grid-item left"></div>
+  return `<div class="grid-item left"><i class=""></i></div>
       <div class="grid-item center">
       ${obj.center.map((items) => {
-        return `<span class="fas fa-envelope"></span>
+        console.log(items);
+        return `<span class="${obj.img}"></span>
           <h2>${items.title}</h2>
           <p>${items.text}</p>
           `;
